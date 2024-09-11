@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,6 +16,28 @@ public class Main {
         //wypisywanie elementow z tablicy
         for (int element:tabliczaLosowych         ) {
             System.out.print(element+", ");
+        }
+        //kolekcje, elementy typami zlozonymi
+        //nie musza miec zdefiniowanego rozmiaru
+        //rozmiar w trakcie moze sie zmieniac
+        //listy List, zbiory set, mapy
+
+        //wstawianie liczb z klawiatury do kolekcji
+        List<Integer> listaLiczbWpisanych = new ArrayList<>();
+        System.out.println("podaj 6 liczb");
+        Scanner klawiatura = new Scanner(System.in);
+        for (int i = 0; i < 6; i++) {
+            int liczba = klawiatura.nextInt();
+            listaLiczbWpisanych.add(liczba);
+        }
+        System.out.println("Wstawione liczby: ");
+        for (Integer liczbaWpisana:listaLiczbWpisanych){
+            System.out.println(liczbaWpisana);
+        }
+        //wypisywanie inaczej
+        System.out.println("Wstawione liczby: ");
+        for (int i = 0; i < listaLiczbWpisanych.size(); i++) {
+            System.out.println(listaLiczbWpisanych.get(i));
         }
     }
 }
