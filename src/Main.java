@@ -65,5 +65,14 @@ public class Main {
         elementy unikatowe
         elementy nie sa indeksowane
          */
+
+        LinkedList<Integer> trafione = new LinkedList<>();
+        //trafione to elementy ktore wystepuja w wylosowanych i wpisanych
+    for (Integer wpisana: listaLiczbWpisanych){
+        if (zbiorLiczbLosowych.contains(wpisana)){
+            trafione.add(wpisana);
+        }
+        }
+        System.out.println("trafiono: "+trafione);
     }
 }
